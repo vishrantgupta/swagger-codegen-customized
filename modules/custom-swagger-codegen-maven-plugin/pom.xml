@@ -7,7 +7,7 @@
         <version>2.4.6-SNAPSHOT</version>
         <relativePath>../..</relativePath>
     </parent>
-    <artifactId>swagger-codegen-maven-plugin</artifactId>
+    <artifactId>custom-swagger-codegen-maven-plugin</artifactId>
     <name>swagger-codegen (maven-plugin)</name>
     <packaging>maven-plugin</packaging>
     <description>maven plugin to build modules from swagger codegen</description>

@@ -2248,6 +2248,7 @@ public class DefaultCodegen {
             for (Parameter param : parameters) {
                 CodegenParameter p = fromParameter(param, imports);
                 // rename parameters to make sure all of them have unique names
+
                 if (ensureUniqueParams) {
                     while (true) {
                         boolean exists = false;
@@ -2265,7 +2266,11 @@ public class DefaultCodegen {
                     }
                 }
 
-                allParams.add(p);
+                // skip header param
+                if (!p.isHeaderParam) {
+                    allParams.add(p);
+                }
+
                 // Issue #2561 (neilotoole) : Moved setting of is<Type>Param flags
                 // from here to fromParameter().
                 if (param instanceof QueryParameter) {
